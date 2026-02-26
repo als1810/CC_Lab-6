@@ -1,10 +1,6 @@
 FROM jenkins/jenkins:lts
 
 USER root
-
-# Install Docker CLI inside Jenkins container
-RUN apt-get update && \
-    apt-get install -y docker.io && \
-    apt-get clean
+RUN apt-get update && apt-get install -y     docker.io     make     g++     curl
 
 USER jenkins
